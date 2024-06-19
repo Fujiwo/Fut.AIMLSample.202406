@@ -97,6 +97,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CopilotSample", "CopilotSam
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{30A51A8C-B127-42D8-BAB2-0F146F510A14}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -127,7 +128,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureOpenAISample", "AzureO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GptConsole", "GptConsole\GptConsole.csproj", "{999F5E63-F1A4-4D6F-846E-0695FEEE84BB}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ComputerVisionDemo.Web", "ComputerVisionDemo.Web\", "{5672CD4F-3345-49C5-A2D4-8ACB5C3D8E14}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ComputerVisionDemo.Web(1)", "ComputerVisionDemo.Web\", "{5672CD4F-3345-49C5-A2D4-8ACB5C3D8E14}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_52743"
@@ -145,6 +146,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ComputerVisionDemo.Web", "C
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52743"
+		SlnRelativePath = "ComputerVisionDemo.Web\"
 	EndProjectSection
 EndProject
 Global
