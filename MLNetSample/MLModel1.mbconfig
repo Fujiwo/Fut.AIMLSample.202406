@@ -1,0 +1,323 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": true,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Dropbox\\Source\\GitHub\\Repos\\Fut.AIMLSample.20230629\\MLNetSample\\Data\\locations.training.header.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Latitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Longitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Value",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.9899360520760464,
+        "RuntimeInSeconds": 156.291,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Value",
+            "InputColumnName": "Value",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 6923,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.077339450316015634,
+            "NumberOfTrees": 2853,
+            "SubsampleFraction": 0.12773466838659872,
+            "MaximumBinCountPerFeature": 253,
+            "FeatureFraction": 0.94988918584928994,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "Value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.98663934877934312,
+        "RuntimeInSeconds": 28.943,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Value",
+            "InputColumnName": "Value",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 4858,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.703588296774014,
+            "NumberOfTrees": 1742,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 229,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "Value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.98656152402631281,
+        "RuntimeInSeconds": 5.534,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Value",
+            "InputColumnName": "Value",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 900,
+            "MinimumExampleCountPerLeaf": 15,
+            "NumberOfTrees": 17,
+            "MaximumBinCountPerFeature": 1023,
+            "FeatureFraction": 0.72204996084278039,
+            "LearningRate": 0.05534257456500967,
+            "LabelColumnName": "Value",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.98593512342723044,
+        "RuntimeInSeconds": 11.034,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Value",
+            "InputColumnName": "Value",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 1391,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.9249175160764147,
+            "NumberOfTrees": 314,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 233,
+            "FeatureFraction": 0.95509194871327219,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.88812535408550652,
+            "LabelColumnName": "Value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.98236888333367212,
+        "RuntimeInSeconds": 10.915,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Latitude",
+              "Longitude"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Value",
+            "InputColumnName": "Value",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 15,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 7,
+            "MaximumBinCountPerFeature": 1023,
+            "FeatureFraction": 0.63226373011589543,
+            "LearningRate": 0.974018194410298,
+            "LabelColumnName": "Value",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "FastForestOva",
+      "e5": "LightGbmMulti",
+      "e6": "LbfgsLogisticRegressionOva",
+      "e7": "LbfgsMaximumEntropyMulti",
+      "e8": "SdcaMaximumEntropyMulti",
+      "e9": "SdcaLogisticRegressionOva",
+      "e10": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9) * e10",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Dropbox\\Source\\GitHub\\Repos\\Fut.AIMLSample.202406\\MLNetSample\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 600,
+    "LabelColumn": "Value",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
