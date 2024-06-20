@@ -60,11 +60,10 @@ public abstract class AIChatModel
 {
     const string endPoint = "https://202312azureopenai.openai.azure.com/";
     const string modelName = "202312AzureAIModel";
-    static string ApiKey => "504f535b86e14aa3ba5c12933a4e14bb";
-    //Environment.GetEnvironmentVariable("AZURE_OPENAI_API_KEY")
+    static readonly string apiKey = Environment.GetEnvironmentVariable("AZURE_OPENAI_API_KEY") ?? string.Empty;
 
     //const int maximumMessageCount = 10 - 1;
-	const string clearCommand = "clear";
+    const string clearCommand = "clear";
 
 	public IList<Message> Messages { get; } = [];
 
@@ -107,7 +106,7 @@ public abstract class AIChatModel
 
 		var client = new OpenAIClient(
 			new Uri(endPoint),
-			new AzureKeyCredential(ApiKey));
+			new AzureKeyCredential(apiKey));
 
 		var chatCompletionsOptions = CurrentChatCompletionsOptions;
 
